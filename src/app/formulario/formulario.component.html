@@ -1,0 +1,20 @@
+<div class="card m-5 p-3" style="font-family: 'Montserrat', sans-serif;">
+  <h5 class="card-title">Ingresa tus datos</h5>
+  <form (submit)="onSubmit()" class="m-5">
+
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre:</label>
+      <input type="text" class="form-control" id="nombre" [(ngModel)]="nombre" (ngModelChange)="validarFormulario()" name="nombre" required>  
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" [(ngModel)]="email" (ngModelChange)="validarFormulario()" placeholder="name@example.com" name="email" required>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!formularioValido">Enviar</button>
+ </form>
+</div>
+
+
+ 
